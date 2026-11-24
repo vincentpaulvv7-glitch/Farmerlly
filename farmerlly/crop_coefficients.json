@@ -1,0 +1,548 @@
+{
+  "schema_version": 1,
+  "method": "FAO-56 single crop coefficient, ETc = Kc × ET0",
+  "crops": {
+    "rice": {
+      "source_name": "FAO Irrigation and Drainage Paper 56, Chapter 6, Table 12 and paddy rice initial-stage note",
+      "source_url": "https://www.fao.org/4/X0490E/x0490e0b.htm",
+      "standard_conditions": "Typical values for non-stressed, well-managed crops in a sub-humid climate; FAO-56 advises climate and wetting adjustments.",
+      "stages": {
+        "nursery": {
+          "kc": [
+            1.05,
+            1.05
+          ],
+          "phase": "initial",
+          "note": "FAO-56's 1.05 initial coefficient is specifically for paddy rice with 0.10–0.20 m standing water, sub-humid conditions, and calm to moderate wind. It is a reference estimate for this nursery/seedling stage; a dry or mat nursery can differ and should be checked locally."
+        },
+        "transplanting": {
+          "kc": [
+            1.05,
+            1.05
+          ],
+          "phase": "initial",
+          "note": "FAO-56 paddy-rice initial value; actual Kc depends on standing water, wetting frequency, and climate."
+        },
+        "tillering": {
+          "kc": [
+            1.05,
+            1.2
+          ],
+          "phase": "development",
+          "note": "FAO-56 crop-development coefficient interpolates from Kc_ini to Kc_mid; stage duration is unavailable, so this range is shown."
+        },
+        "panicle": {
+          "kc": [
+            1.2,
+            1.2
+          ],
+          "phase": "mid-season",
+          "note": "FAO-56 typical mid-season value; local climate and crop height can change it."
+        },
+        "flowering": {
+          "kc": [
+            1.2,
+            1.2
+          ],
+          "phase": "mid-season",
+          "note": "FAO-56 typical mid-season value; local climate and crop height can change it."
+        },
+        "grain_fill": {
+          "kc": [
+            0.6,
+            0.9
+          ],
+          "phase": "late-season",
+          "note": "FAO-56 lists a late-season range of 0.90–0.60; shown as a range because maturity and water management affect the end value."
+        },
+        "maturity": {
+          "kc": [
+            0.6,
+            0.9
+          ],
+          "phase": "late-season",
+          "note": "FAO-56 lists a late-season range of 0.90–0.60; shown as a range because maturity and water management affect the end value."
+        }
+      }
+    },
+    "tomato": {
+      "source_name": "FAO Irrigation and Drainage Paper 56, Chapter 6, Table 12 (Solanaceae)",
+      "source_url": "https://www.fao.org/4/X0490E/x0490e0b.htm",
+      "standard_conditions": "Typical values for non-stressed, well-managed crops in a sub-humid climate; FAO-56 advises climate and wetting adjustments.",
+      "stages": {
+        "nursery": {
+          "kc": [
+            0.6,
+            0.6
+          ],
+          "phase": "initial",
+          "note": "FAO-56 Solanaceae initial value; nursery management and wetting frequency can change actual Kc."
+        },
+        "transplanting": {
+          "kc": [
+            0.6,
+            0.6
+          ],
+          "phase": "initial",
+          "note": "FAO-56 Solanaceae initial value; wetting frequency and local conditions can change actual Kc."
+        },
+        "vegetative": {
+          "kc": [
+            0.6,
+            1.15
+          ],
+          "phase": "development",
+          "note": "FAO-56 crop-development coefficient interpolates from Kc_ini to Kc_mid; stage duration is unavailable, so this range is shown."
+        },
+        "flowering": {
+          "kc": [
+            1.15,
+            1.15
+          ],
+          "phase": "mid-season",
+          "note": "FAO-56 Solanaceae mid-season value; local climate and canopy height can change it."
+        },
+        "fruit_set": {
+          "kc": [
+            1.15,
+            1.15
+          ],
+          "phase": "mid-season",
+          "note": "FAO-56 Solanaceae mid-season value; local climate and canopy height can change it."
+        }
+      }
+    },
+    "banana": {
+      "source_name": "FAO Irrigation and Drainage Paper 56, Chapter 6, Table 12 (tropical fruits, banana first year)",
+      "source_url": "https://www.fao.org/4/X0490E/x0490e0b.htm",
+      "standard_conditions": "Typical values for non-stressed, well-managed crops in a sub-humid climate; FAO-56 advises climate and wetting adjustments.",
+      "stages": {
+        "establishment": {
+          "kc": [
+            0.5,
+            0.5
+          ],
+          "phase": "initial",
+          "note": "FAO-56 initial-stage planning value (0.5); actual Kc depends on wetting frequency and local conditions."
+        },
+        "vegetative": {
+          "kc": [
+            0.5,
+            1.1
+          ],
+          "phase": "development",
+          "note": "FAO-56 crop-development coefficient transitions from Kc_ini to Kc_mid; the crop-stage duration is unavailable, so this range is shown (0.5?1.1)."
+        },
+        "flowering": {
+          "kc": [
+            1.1,
+            1.1
+          ],
+          "phase": "mid-season",
+          "note": "FAO-56 typical mid-season value (1.1?1.1); local climate and crop height can change it."
+        },
+        "bunch": {
+          "kc": [
+            1.1,
+            1.1
+          ],
+          "phase": "mid-season",
+          "note": "FAO-56 typical mid-season value (1.1?1.1); local climate and crop height can change it."
+        },
+        "maturity": {
+          "kc": [
+            1.0,
+            1.0
+          ],
+          "phase": "late-season",
+          "note": "FAO-56 late-season value/range (1?1); maturity and local management can change it."
+        }
+      }
+    },
+    "maize": {
+      "source_name": "FAO Irrigation and Drainage Paper 56, Chapter 6, Table 12 (field maize, grain)",
+      "source_url": "https://www.fao.org/4/X0490E/x0490e0b.htm",
+      "standard_conditions": "Typical values for non-stressed, well-managed crops in a sub-humid climate; FAO-56 advises climate and wetting adjustments.",
+      "stages": {
+        "sowing": {
+          "kc": [
+            0.3,
+            0.3
+          ],
+          "phase": "initial",
+          "note": "FAO-56 initial-stage planning value (0.3); actual Kc depends on wetting frequency and local conditions."
+        },
+        "establishment": {
+          "kc": [
+            0.3,
+            0.3
+          ],
+          "phase": "initial",
+          "note": "FAO-56 initial-stage planning value (0.3); actual Kc depends on wetting frequency and local conditions."
+        },
+        "vegetative": {
+          "kc": [
+            0.3,
+            1.2
+          ],
+          "phase": "development",
+          "note": "FAO-56 crop-development coefficient transitions from Kc_ini to Kc_mid; the crop-stage duration is unavailable, so this range is shown (0.3?1.2)."
+        },
+        "flowering": {
+          "kc": [
+            1.2,
+            1.2
+          ],
+          "phase": "mid-season",
+          "note": "FAO-56 typical mid-season value (1.2?1.2); local climate and crop height can change it."
+        },
+        "development": {
+          "kc": [
+            1.2,
+            1.2
+          ],
+          "phase": "mid-season",
+          "note": "FAO-56 typical mid-season value (1.2?1.2); local climate and crop height can change it."
+        },
+        "maturity": {
+          "kc": [
+            0.35,
+            0.6
+          ],
+          "phase": "late-season",
+          "note": "FAO-56 late-season value/range (0.35?0.6); maturity and local management can change it."
+        }
+      }
+    },
+    "wheat": {
+      "source_name": "FAO Irrigation and Drainage Paper 56, Chapter 6, Table 12 (spring wheat)",
+      "source_url": "https://www.fao.org/4/X0490E/x0490e0b.htm",
+      "standard_conditions": "Typical values for non-stressed, well-managed crops in a sub-humid climate; FAO-56 advises climate and wetting adjustments.",
+      "stages": {
+        "sowing": {
+          "kc": [
+            0.3,
+            0.3
+          ],
+          "phase": "initial",
+          "note": "FAO-56 initial-stage planning value (0.3); actual Kc depends on wetting frequency and local conditions."
+        },
+        "establishment": {
+          "kc": [
+            0.3,
+            0.3
+          ],
+          "phase": "initial",
+          "note": "FAO-56 initial-stage planning value (0.3); actual Kc depends on wetting frequency and local conditions."
+        },
+        "vegetative": {
+          "kc": [
+            0.3,
+            1.15
+          ],
+          "phase": "development",
+          "note": "FAO-56 crop-development coefficient transitions from Kc_ini to Kc_mid; the crop-stage duration is unavailable, so this range is shown (0.3?1.15)."
+        },
+        "flowering": {
+          "kc": [
+            1.15,
+            1.15
+          ],
+          "phase": "mid-season",
+          "note": "FAO-56 typical mid-season value (1.15?1.15); local climate and crop height can change it."
+        },
+        "development": {
+          "kc": [
+            1.15,
+            1.15
+          ],
+          "phase": "mid-season",
+          "note": "FAO-56 typical mid-season value (1.15?1.15); local climate and crop height can change it."
+        },
+        "maturity": {
+          "kc": [
+            0.25,
+            0.4
+          ],
+          "phase": "late-season",
+          "note": "FAO-56 late-season value/range (0.25?0.4); maturity and local management can change it."
+        }
+      }
+    },
+    "cotton": {
+      "source_name": "FAO Irrigation and Drainage Paper 56, Chapter 6, Table 12 (fibre crops, cotton)",
+      "source_url": "https://www.fao.org/4/X0490E/x0490e0b.htm",
+      "standard_conditions": "Typical values for non-stressed, well-managed crops in a sub-humid climate; FAO-56 advises climate and wetting adjustments.",
+      "stages": {
+        "sowing": {
+          "kc": [
+            0.35,
+            0.35
+          ],
+          "phase": "initial",
+          "note": "FAO-56 initial-stage planning value (0.35); actual Kc depends on wetting frequency and local conditions."
+        },
+        "establishment": {
+          "kc": [
+            0.35,
+            0.35
+          ],
+          "phase": "initial",
+          "note": "FAO-56 initial-stage planning value (0.35); actual Kc depends on wetting frequency and local conditions."
+        },
+        "vegetative": {
+          "kc": [
+            0.35,
+            1.2
+          ],
+          "phase": "development",
+          "note": "FAO-56 crop-development coefficient transitions from Kc_ini to Kc_mid; the crop-stage duration is unavailable, so this range is shown (0.35?1.2)."
+        },
+        "flowering": {
+          "kc": [
+            1.15,
+            1.2
+          ],
+          "phase": "mid-season",
+          "note": "FAO-56 typical mid-season value (1.15?1.2); local climate and crop height can change it."
+        },
+        "development": {
+          "kc": [
+            1.15,
+            1.2
+          ],
+          "phase": "mid-season",
+          "note": "FAO-56 typical mid-season value (1.15?1.2); local climate and crop height can change it."
+        },
+        "maturity": {
+          "kc": [
+            0.5,
+            0.7
+          ],
+          "phase": "late-season",
+          "note": "FAO-56 late-season value/range (0.5?0.7); maturity and local management can change it."
+        }
+      }
+    },
+    "sugarcane": {
+      "source_name": "FAO Irrigation and Drainage Paper 56, Chapter 6, Table 12 (sugar cane)",
+      "source_url": "https://www.fao.org/4/X0490E/x0490e0b.htm",
+      "standard_conditions": "Typical values for non-stressed, well-managed crops in a sub-humid climate; FAO-56 advises climate and wetting adjustments.",
+      "stages": {
+        "sowing": {
+          "kc": [
+            0.4,
+            0.4
+          ],
+          "phase": "initial",
+          "note": "FAO-56 initial-stage planning value (0.4); actual Kc depends on wetting frequency and local conditions."
+        },
+        "establishment": {
+          "kc": [
+            0.4,
+            0.4
+          ],
+          "phase": "initial",
+          "note": "FAO-56 initial-stage planning value (0.4); actual Kc depends on wetting frequency and local conditions."
+        },
+        "vegetative": {
+          "kc": [
+            0.4,
+            1.25
+          ],
+          "phase": "development",
+          "note": "FAO-56 crop-development coefficient transitions from Kc_ini to Kc_mid; the crop-stage duration is unavailable, so this range is shown (0.4?1.25)."
+        },
+        "flowering": {
+          "kc": [
+            1.25,
+            1.25
+          ],
+          "phase": "mid-season",
+          "note": "FAO-56 typical mid-season value (1.25?1.25); local climate and crop height can change it."
+        },
+        "development": {
+          "kc": [
+            1.25,
+            1.25
+          ],
+          "phase": "mid-season",
+          "note": "FAO-56 typical mid-season value (1.25?1.25); local climate and crop height can change it."
+        },
+        "maturity": {
+          "kc": [
+            0.75,
+            0.75
+          ],
+          "phase": "late-season",
+          "note": "FAO-56 late-season value/range (0.75?0.75); maturity and local management can change it."
+        }
+      }
+    },
+    "groundnut": {
+      "source_name": "FAO Irrigation and Drainage Paper 56, Chapter 6, Table 12 (groundnut/peanut)",
+      "source_url": "https://www.fao.org/4/X0490E/x0490e0b.htm",
+      "standard_conditions": "Typical values for non-stressed, well-managed crops in a sub-humid climate; FAO-56 advises climate and wetting adjustments.",
+      "stages": {
+        "sowing": {
+          "kc": [
+            0.4,
+            0.4
+          ],
+          "phase": "initial",
+          "note": "FAO-56 initial-stage planning value (0.4); actual Kc depends on wetting frequency and local conditions."
+        },
+        "establishment": {
+          "kc": [
+            0.4,
+            0.4
+          ],
+          "phase": "initial",
+          "note": "FAO-56 initial-stage planning value (0.4); actual Kc depends on wetting frequency and local conditions."
+        },
+        "vegetative": {
+          "kc": [
+            0.4,
+            1.15
+          ],
+          "phase": "development",
+          "note": "FAO-56 crop-development coefficient transitions from Kc_ini to Kc_mid; the crop-stage duration is unavailable, so this range is shown (0.4?1.15)."
+        },
+        "flowering": {
+          "kc": [
+            1.15,
+            1.15
+          ],
+          "phase": "mid-season",
+          "note": "FAO-56 typical mid-season value (1.15?1.15); local climate and crop height can change it."
+        },
+        "development": {
+          "kc": [
+            1.15,
+            1.15
+          ],
+          "phase": "mid-season",
+          "note": "FAO-56 typical mid-season value (1.15?1.15); local climate and crop height can change it."
+        },
+        "maturity": {
+          "kc": [
+            0.6,
+            0.6
+          ],
+          "phase": "late-season",
+          "note": "FAO-56 late-season value/range (0.6?0.6); maturity and local management can change it."
+        }
+      }
+    },
+    "millet": {
+      "source_name": "FAO Irrigation and Drainage Paper 56, Chapter 6, Table 12 (millet)",
+      "source_url": "https://www.fao.org/4/X0490E/x0490e0b.htm",
+      "standard_conditions": "Typical values for non-stressed, well-managed crops in a sub-humid climate; FAO-56 advises climate and wetting adjustments.",
+      "stages": {
+        "sowing": {
+          "kc": [
+            0.3,
+            0.3
+          ],
+          "phase": "initial",
+          "note": "FAO-56 initial-stage planning value (0.3); actual Kc depends on wetting frequency and local conditions."
+        },
+        "establishment": {
+          "kc": [
+            0.3,
+            0.3
+          ],
+          "phase": "initial",
+          "note": "FAO-56 initial-stage planning value (0.3); actual Kc depends on wetting frequency and local conditions."
+        },
+        "vegetative": {
+          "kc": [
+            0.3,
+            1.0
+          ],
+          "phase": "development",
+          "note": "FAO-56 crop-development coefficient transitions from Kc_ini to Kc_mid; the crop-stage duration is unavailable, so this range is shown (0.3?1)."
+        },
+        "flowering": {
+          "kc": [
+            1.0,
+            1.0
+          ],
+          "phase": "mid-season",
+          "note": "FAO-56 typical mid-season value (1?1); local climate and crop height can change it."
+        },
+        "development": {
+          "kc": [
+            1.0,
+            1.0
+          ],
+          "phase": "mid-season",
+          "note": "FAO-56 typical mid-season value (1?1); local climate and crop height can change it."
+        },
+        "maturity": {
+          "kc": [
+            0.3,
+            0.3
+          ],
+          "phase": "late-season",
+          "note": "FAO-56 late-season value/range (0.3?0.3); maturity and local management can change it."
+        }
+      }
+    },
+    "pulses": {
+      "source_name": "FAO Irrigation and Drainage Paper 56, Chapter 6, Table 12 (dry beans and pulses)",
+      "source_url": "https://www.fao.org/4/X0490E/x0490e0b.htm",
+      "standard_conditions": "Typical values for non-stressed, well-managed crops in a sub-humid climate; FAO-56 advises climate and wetting adjustments.",
+      "stages": {
+        "sowing": {
+          "kc": [
+            0.4,
+            0.4
+          ],
+          "phase": "initial",
+          "note": "FAO-56 initial-stage planning value (0.4); actual Kc depends on wetting frequency and local conditions."
+        },
+        "establishment": {
+          "kc": [
+            0.4,
+            0.4
+          ],
+          "phase": "initial",
+          "note": "FAO-56 initial-stage planning value (0.4); actual Kc depends on wetting frequency and local conditions."
+        },
+        "vegetative": {
+          "kc": [
+            0.4,
+            1.15
+          ],
+          "phase": "development",
+          "note": "FAO-56 crop-development coefficient transitions from Kc_ini to Kc_mid; the crop-stage duration is unavailable, so this range is shown (0.4?1.15)."
+        },
+        "flowering": {
+          "kc": [
+            1.15,
+            1.15
+          ],
+          "phase": "mid-season",
+          "note": "FAO-56 typical mid-season value (1.15?1.15); local climate and crop height can change it."
+        },
+        "development": {
+          "kc": [
+            1.15,
+            1.15
+          ],
+          "phase": "mid-season",
+          "note": "FAO-56 typical mid-season value (1.15?1.15); local climate and crop height can change it."
+        },
+        "maturity": {
+          "kc": [
+            0.35,
+            0.35
+          ],
+          "phase": "late-season",
+          "note": "FAO-56 late-season value/range (0.35?0.35); maturity and local management can change it."
+        }
+      }
+    }
+  }
+}
